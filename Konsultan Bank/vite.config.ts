@@ -18,6 +18,11 @@ export default defineConfig({
       'bank.atpshowcase.com'
     ]
   },
+  preview: {
+    port: 2007,
+    host: true,
+    strictPort: true,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

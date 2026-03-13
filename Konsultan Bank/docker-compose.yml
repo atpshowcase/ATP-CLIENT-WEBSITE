@@ -1,14 +1,7 @@
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: konsultan-bank-web
+    build: .
+    container_name: atp-bank-client-website
     ports:
       - "2007:2007"
-    command: npm run dev -- --host 0.0.0.0 --port 2007
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-    volumes:
-      - .:/app
-      - /app/node_modules
+    restart: always
