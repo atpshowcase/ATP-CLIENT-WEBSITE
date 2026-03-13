@@ -1,0 +1,25 @@
+/* App-specific styles */
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: auto;
+}
+
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure full-width sections */
+section {
+  width: 100%;
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .section-pinned {
+    min-height: -webkit-fill-available;
+  }
+}
