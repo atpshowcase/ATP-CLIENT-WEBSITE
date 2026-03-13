@@ -7,6 +7,7 @@ RUN npm ci
 
 COPY . .
 
-EXPOSE 2007
+RUN npm run build
 
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "2007"]
+EXPOSE 2007
+CMD ["npx", "serve", "-s", "dist", "-l", "tcp://0.0.0.0:2007"]
